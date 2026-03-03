@@ -4,143 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MMLA - Maktab Minhaj Learning Academy</title>
-    
     <link rel="icon" type="image/png" href="https://i.ibb.co/C3fKzY6/MMLA-Logo.png">
-    <link rel="apple-touch-icon" href="https://i.ibb.co/C3fKzY6/MMLA-Logo.png">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --blue: #0d3b66; --gold: #d4af37; --red: #800000; --light: #f4f7f9; }
-        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background: var(--light); color: #333; line-height: 1.6; scroll-behavior: smooth; }
-        header { background: white; padding: 20px; text-align: center; border-bottom: 4px solid var(--gold); }
-        .logo-img { max-width: 280px; height: auto; }
-        nav { background: var(--blue); padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; font-size: 14px; }
-        .hero { height: 450px; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.ibb.co/IMG-20260303-WA0093.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 20px; }
-        .hero-content h1 { font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .section { padding: 40px 15px; max-width: 1100px; margin: auto; }
-        h2 { text-align: center; color: var(--blue); margin-bottom: 30px; font-size: 24px; border-bottom: 2px solid var(--gold); display: inline-block; width: 100%; padding-bottom: 10px; }
-        .welcome-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 30px; text-align: center; border-left: 5px solid var(--gold); }
-        .lang-text { margin-bottom: 15px; line-height: 1.8; }
-        .urdu { font-size: 24px; direction: rtl; color: var(--blue); }
-        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .course-card { background: white; padding: 20px; border-radius: 10px; border-top: 4px solid var(--blue); box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
-        .course-card h3 { color: var(--red); margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        :root { --dark-green: #1b4332; --gold: #d4af37; --red: #a4161a; --bg: #f8f9fa; }
+        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: var(--bg); color: #333; line-height: 1.6; }
+        header { background: white; padding: 15px; text-align: center; border-bottom: 4px solid var(--gold); }
+        .logo-img { max-width: 250px; }
+        nav { background: var(--dark-green); padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; }
+        .welcome-box { background: white; padding: 30px; border-radius: 15px; margin: 20px; text-align: center; border-top: 5px solid var(--dark-green); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .urdu { font-size: 28px; direction: rtl; color: var(--dark-green); font-weight: bold; margin-bottom: 15px; }
+        .hindi { font-size: 20px; font-weight: bold; color: #333; margin-bottom: 10px; }
+        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
+        .course-card { background: white; padding: 25px; border-radius: 12px; border-left: 5px solid var(--gold); box-shadow: 0 3px 10px rgba(0,0,0,0.05); }
+        .course-card h3 { color: var(--red); margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
         .course-card ul { list-style: none; }
-        .course-card li { margin-bottom: 8px; font-size: 15px; display: flex; align-items: flex-start; gap: 8px; }
-        .course-card li::before { content: "✔️"; color: #25d366; font-size: 12px; margin-top: 3px; }
-        .admission-box { background: var(--blue); color: white; padding: 40px; border-radius: 20px; text-align: center; margin-top: 30px; }
-        .qr-img { width: 220px; border: 8px solid white; border-radius: 15px; margin: 25px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-        .btn { display: inline-block; background: var(--gold); color: var(--blue); padding: 15px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 18px; margin: 10px; transition: 0.3s; }
-        .btn:hover { transform: scale(1.05); background: white; }
-        .policy-box { background: #e8f5e9; padding: 25px; border-radius: 12px; margin-top: 30px; border: 1px dashed #2e7d32; }
-        footer { background: var(--blue); color: white; text-align: center; padding: 30px; margin-top: 50px; font-size: 14px; }
-        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 1000; }
-        @media (max-width: 600px) { .hero-content h1 { font-size: 1.6rem; } nav a { margin: 0 5px; font-size: 12px; } .logo-img { max-width: 220px; } }
+        .course-card li { margin-bottom: 8px; font-size: 15px; }
+        .course-card li::before { content: "✓ "; color: var(--dark-green); font-weight: bold; }
+        .admission-box { background: var(--dark-green); color: white; padding: 40px 20px; text-align: center; border-radius: 20px; margin: 20px; }
+        .btn { display: inline-block; background: var(--gold); color: white; padding: 15px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px; }
+        .qr-img { width: 220px; border: 5px solid white; border-radius: 15px; margin: 25px 0; }
+        .policy-box { background: #fff5f5; padding: 25px; border-radius: 15px; margin: 20px; border-left: 6px solid var(--red); }
+        footer { background: #111; color: white; text-align: center; padding: 40px 20px; margin-top: 50px; }
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
     </style>
 </head>
 <body>
-
-<header>
-    <img src="https://i.ibb.co/C3fKzY6/MMLA-Logo.png" alt="MMLA Logo" class="logo-img">
-</header>
-
-<nav>
-    <a href="#home">Home</a>
-    <a href="#courses">Courses</a>
-    <a href="#admission">Admission</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="home" class="hero">
-    <div class="hero-content">
-        <h1>Welcome to MMLA</h1>
-        <p style="font-size: 1.2rem; font-weight: 500;">Ilm • Tarbiyat • Roshni</p>
-        <a href="#admission" class="btn">Register Now / रजिस्टर करें</a>
-    </div>
+<header><img src="https://i.ibb.co/C3fKzY6/MMLA-Logo.png" class="logo-img"></header>
+<nav><a href="#home">Home</a><a href="#courses">Courses</a><a href="#admission">Admission</a></nav>
+<section class="welcome-box">
+    <div class="urdu">مکتب منہاج لرنینگ اکیڈمی میں آپ کا خیر مقدم ہے۔ ہمارا مقصد دینی اور عصری تعلیم کے ذریعے نئی نسل کی بہترین تربیت کرنا ہے۔</div>
+    <div class="hindi">मकतब मिन्हाज लर्निंग एकेडमी में आपका स्वागत है। हमारा उद्देश्य धार्मिक और आधुनिक शिक्षा के माध्यम से नई पीढ़ी को शिक्षित करना है।</div>
 </section>
-
-<section class="section">
-    <div class="welcome-box">
-        <div class="lang-text urdu">مکتب منہاج لرنینگ اکیڈمی میں آپ کا خیر مقدم ہے۔ ہمارا مقصد دینی اور عصری تعلیم کے ذریعے نئی نسل کی بہترین تربیت کرنا ہے۔</div>
-        <div class="lang-text" style="font-weight:bold; color: var(--blue);">मकतब मिन्हाज लर्निंग एकेडमी में आपका स्वागत है। हमारा उद्देश्य धार्मिक और आधुनिक शिक्षा के माध्यम se नई पीढ़ी को शिक्षित करना है।</div>
+<div class="course-grid" id="courses">
+    <div class="course-card">
+        <h3>1️⃣ Online Islamic & Academic</h3>
+        <ul>
+            <li>Quran Nazra with Tajweed</li>
+            <li>Selected Surah Hifz & 40 Masnoon Duas</li>
+            <li>Academic Tuition (Class 1-10): All Subjects</li>
+            <li>Computer Basics: MS Word, Typing</li>
+        </ul>
     </div>
-
-    <h2 id="courses">Courses (Online & Offline) 📚</h2>
-    <div class="course-grid">
-        <div class="course-card">
-            <h3>🌐 Online Classes</h3>
-            <ul>
-                <li>Quran Nazra with Tajweed</li>
-                <li>Basic Fiqh & 40 Masnoon Duas</li>
-                <li>Academic Tuition (Class 1-10)</li>
-                <li>Computer Basics (Typing, Word)</li>
-            </ul>
-        </div>
-        <div class="course-card">
-            <h3>📖 Offline Academy</h3>
-            <ul>
-                <li>Islamic Akhlaq & Seerat-un-Nabi ﷺ</li>
-                <li>English Grammar & Speaking</li>
-                <li>Science, Math & Social Science</li>
-                <li>Monthly Progress Report & Tests</li>
-            </ul>
-        </div>
-        <div class="course-card">
-            <h3>🖥️ Vocational Skills</h3>
-            <ul>
-                <li>Computer (3 & 6 Months Courses)</li>
-                <li><b>Rabiya Silai Center</b> (Basic & Adv)</li>
-                <li><b>Mehandi Course</b> (Arabic & Bridal)</li>
-            </ul>
-        </div>
-        <div class="course-card">
-            <h3>🇸🇦 Language Lab</h3>
-            <ul>
-                <li>Arabic (Nahw & Sarf)</li>
-                <li>Urdu Reading & Writing</li>
-                <li>Public Speaking & Interview Prep</li>
-            </ul>
-        </div>
+    <div class="course-card">
+        <h3>2️⃣ Offline Maktab & Academy</h3>
+        <ul>
+            <li>Quran Sharif with Tajweed Rules</li>
+            <li>Namaz Practical & Seerat-un-Nabi ﷺ</li>
+            <li>Islamic Akhlaq Training</li>
+            <li>English Grammar & Speaking</li>
+        </ul>
     </div>
+    <div class="course-card">
+        <h3>3️⃣ Vocational Skills</h3>
+        <ul>
+            <li>Computer: Basic & Advanced</li>
+            <li>Rabiya Silai Center: Cutting & Stitching</li>
+            <li>Mehandi Course: Arabic & Bridal</li>
+        </ul>
+    </div>
+</div>
+<section id="admission" class="admission-box">
+    <h2>Admission 2026</h2>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7DVMDHUEyy6YVwriZXhUbaoUXxrJDBJ3ZATJRIzZDeFGpwg/viewform" class="btn">FILL ADMISSION FORM</a>
+    <div style="margin-top: 40px;"><h3>Admission Fee Payment</h3><img src="https://i.ibb.co/IMG-20260303-WA0091.jpg" class="qr-img"></div>
 </section>
-
-<section id="admission" class="section">
-    <div class="admission-box">
-        <h2 style="color: white; border-bottom-color: white;">Admission 2026</h2>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7DVMDHUEyy6YVwriZXhUbaoUXxrJDBJ3ZATJRIzZDeFGpwg/viewform" target="_blank" class="btn" style="background: white;">Fill Admission Form</a>
-        
-        <div style="margin-top: 40px;">
-            <h3>Payment (QR Code)</h3>
-            <img src="https://i.ibb.co/IMG-20260303-WA0091.jpg" alt="Payment QR" class="qr-img">
-            <p><small>Note: Share screenshot on WhatsApp after paying.</small></p>
-        </div>
-    </div>
-
-    <div class="policy-box">
-        <h3 style="color: #2e7d32; margin-bottom: 10px;">🌟 Neki aur Sahulyat (Social Service)</h3>
-        <p>• <b>Discount:</b> Gareeb aur zarooratmand bacchon ke liye fees mein vishesh chhoot di jayegi.</p>
-        <p>• <b>Yateem Students:</b> Yateem bacchon ke liye taleem bilkul muft (FREE) hai.</p>
-        <p>• <b>Policies:</b> Admission fees non-refundable hain. 75% attendance mandatory hai.</p>
-    </div>
-</section>
-
-<section id="contact" class="section" style="text-align: center;">
-    <h2>Contact Us / رابطہ کریں</h2>
-    <p><strong>📞 Helpline:</strong> +91 76677 20172</p>
-    <p><strong>💬 WhatsApp:</strong> +91 92963 34165</p>
-    <p><strong>📧 Email:</strong> maktabminhajlearningacademy84@gmail.com</p>
-    <p><strong>📍 Address:</strong> Samastipur (Bihar)</p>
-</section>
-
-<footer>
-    <p>&copy; 2026 Maktab Minhaj Learning Academy | Samastipur</p>
-</footer>
-
-<a href="https://wa.me/qr/5VP53PFHDITKK1" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-</a>
-
+<div class="policy-box">
+    <h3>📜 Terms & Privacy Policy</h3>
+    <p>• <b>Refund:</b> Admission fees non-refundable hain.</p>
+    <p>• <b>Discount:</b> Gareeb aur Yateem bacchon ke liye vishesh chhoot aur muft taleem.</p>
+</div>
+<footer><p>📞 Helpline: +91 76677 20172 | 📍 Samastipur, Bihar</p></footer>
+<a href="https://wa.me/qr/5VP53PFHDITKK1" class="whatsapp-float"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a>
 </body>
 </html>
