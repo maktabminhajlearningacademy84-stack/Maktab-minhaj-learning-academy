@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maktab Minhaj Learning Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: #f4f7f9; color: #333; line-height: 1.6; }
+        header { background: #0d3b66; color: #f4d03f; padding: 40px 15px; text-align: center; border-bottom: 5px solid #800000; }
+        header h1 { font-size: 2.4rem; text-transform: uppercase; margin-bottom: 5px; }
+        header p { color: #fff; font-size: 1.1rem; opacity: 0.9; }
+        nav { background: #144a8b; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: #f4d03f; }
+        .hero { height: 400px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+        .hero-text h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+        .section h2 { text-align: center; margin-bottom: 40px; color: #0d3b66; font-size: 2rem; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; border-top: 5px solid #0d3b66; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); border-top-color: #800000; }
+        .card i { font-size: 2.5rem; color: #144a8b; margin-bottom: 15px; }
+        .form-box { background: white; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 800px; margin: auto; }
+        .btn-action { display: inline-block; background: #800000; color: white; padding: 15px 35px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; margin-top: 20px; transition: 0.3s; }
+        .btn-action:hover { background: #0d3b66; transform: scale(1.05); }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; transition: 0.3s; }
+        .gallery img:hover { transform: scale(1.03); }
+        .qr-section { text-align: center; background: #fff; padding: 30px; border-radius: 15px; }
+        .qr-section img { width: 220px; border: 5px solid #f4f4f4; border-radius: 10px; margin: 20px 0; }
+        footer { background: #0d3b66; color: white; text-align: center; padding: 40px 20px; margin-top: 50px; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); z-index: 2000; }
+        @media (max-width: 600px) { header h1 { font-size: 1.8rem; } .hero-text h2 { font-size: 1.6rem; } }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Maktab Minhaj Learning Academy</h1>
+    <p>Ilm Se Roshan Mustaqbil — Quality Education for All</p>
+</header>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#admission">Admission</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h2>Admissions Open for 2026</h2>
+        <p>Expert Coaching | Islamic Studies | Vocational Training</p>
+        <a href="#admission" class="btn-action" style="background: #f4d03f; color: #0d3b66;">Register Now</a>
+    </div>
+</section>
+<section id="courses" class="section">
+    <h2>Our Special Programs</h2>
+    <div class="cards">
+        <div class="card"><i class="fas fa-quran"></i><h3>Islamic Maktab</h3><p>Quran with Tajweed, Hifz, and basic Deeniyat classes.</p></div>
+        <div class="card"><i class="fas fa-pencil-alt"></i><h3>Home Tuition</h3><p>Specialized coaching for Class 1 to 10 (All Subjects).</p></div>
+        <div class="card"><i class="fas fa-laptop"></i><h3>Computer Courses</h3><p>Basic Computer, MS Office, and Professional Typing.</p></div>
+        <div class="card"><i class="fas fa-cut"></i><h3>Rabiya Silai Center</h3><p>Tailoring, Stitching, and Bridal Mehandi for girls.</p></div>
+        <div class="card"><i class="fas fa-language"></i><h3>Language Hub</h3><p>Spoken English, Urdu, and Arabic Language courses.</p></div>
+    </div>
+</section>
+<section id="admission" class="section" style="background: #eef2f7;">
+    <h2>Join the Academy</h2>
+    <div class="form-box">
+        <i class="fas fa-user-edit" style="font-size: 3rem; color: #0d3b66; margin-bottom: 20px;"></i>
+        <h3>Online Admission Form</h3>
+        <p>Niche diye gaye button par click karein aur apni details bharein.</p>
+        <a href="#" target="_blank" class="btn-action">Open Google Form</a>
+        <div class="qr-section" style="margin-top: 40px; border-top: 1px solid #ddd;">
+            <h4 style="margin-top: 20px;">Admission Fee Payment</h4>
+            <img src="https://via.placeholder.com/220?text=Scan+to+Pay" alt="Payment QR Code">
+            <p><small>Note: Share payment screenshot on WhatsApp after paying.</small></p>
+        </div>
+    </div>
+</section>
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <div style="text-align: center;">
+        <p><strong>Address:</strong> Muhammadpur Kuwari, Ward No. 5, Samastipur, Bihar</p>
+        <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+    </div>
+</section>
+<footer><p>&copy; 2026 Maktab Minhaj Learning Academy | Samastipur</p></footer>
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i> Chat with Admin</a>
+</body>
+</html>
